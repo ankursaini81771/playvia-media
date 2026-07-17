@@ -2,17 +2,18 @@
   "expo": {
     "name": "playvia",
     "slug": "playvia",
-    "version": "1.0.0",
+    "version": "1.0.52",
     "orientation": "default",
     "icon": "./assets/images/icon.png",
     "scheme": "playvia",
     "userInterfaceStyle": "automatic",
     "ios": {
       "icon": "./assets/expo.icon",
-      "bundleIdentifier": "com.ankursaini81771.playvia"
+      "bundleIdentifier": "com.rudnex.app"
     },
     "android": {
-      "package": "com.ankursaini81771.playvia",
+      "package": "com.rudnex.app",
+      "versionCode": 52,
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
@@ -21,10 +22,11 @@
       },
       "predictiveBackGestureEnabled": false,
       "permissions": [
-        "CAMERA",
-        "RECORD_AUDIO",
-        "READ_EXTERNAL_STORAGE",
-        "WRITE_EXTERNAL_STORAGE"
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO"
       ]
     },
     "web": {
@@ -54,6 +56,12 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "0c8f98fa-32be-4e0a-9805-295ec1e37ca8"
+      }
     }
   }
 }
