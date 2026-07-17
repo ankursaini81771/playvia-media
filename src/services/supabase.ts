@@ -23,7 +23,11 @@ const customStorage = isClient
       removeItem: async (key: string) => {},
     };
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+// Use placeholder dummy values to prevent app crash-on-launch if EAS has no env variables during build
+const safeUrl = supabaseUrl && supabaseUrl.startsWith('http') ? supabaseUrl : 'https://placeholder-project.supabase.co';
+const safeKey = supabaseAnonKey || 'placeholder-anon-key';
+
+export const supabase = createClient(safeUrl, safeKey, {
   auth: {
     storage: customStorage,
     autoRefreshToken: true,
